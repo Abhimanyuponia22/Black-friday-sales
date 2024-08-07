@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="display-4 text-center">Machine Learning Prediction Form</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" name="Gender" id="gender">
+                    <option value="">Select Gender</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <select class="form-control" name="Age" id="age">
+                    <option value="">Select Age Range</option>
+                    <option value="0">0-17</option>
+                    <option value="1">18-25</option>
+                    <option value="2">26-35</option>
+                    <option value="3">36-45</option>
+                    <option value="4">46-50</option>
+                    <option value="5">51-55</option>
+                    <option value="6">55+</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation</label>
+                <input type="number" class="form-control" name="Occupation" id="occupation" min="0" max="20">
+            </div>
+            <div class="form-group">
+                <label for="cityCategory">City Category</label>
+                <select class="form-control" name="City_Category" id="cityCategory">
+                    <option value="">Select City Category</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="stayInCurrentYears">Stay in Current Years</label>
+                <select class="form-control" name="stay_in_current_years" id="stayInCurrentYears">
+                    <option value="">Select Years of Stay</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4+</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="martialStatus">Marital Status</label>
+                <select class="form-control" name="Martial_status" id="martialStatus">
+                    <option value="">Select Marital Status</option>
+                    <option value="0">Unmarried</option>
+                    <option value="1">Married</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pc1">PC1</label>
+                <input type="number" class="form-control" name="PC1" id="pc1" step="0.02" min="0" max="19">
+            </div>
+            <div class="form-group">
+                <label for="pc2">PC2</label>
+                <input type="number" class="form-control" name="PC2" id="pc2" step="0.02" min="0" max="17">
+            </div>
+            <div class="form-group">
+                <label for="pc3">PC3</label>
+                <input type="number" class="form-control" name="PC3" id="pc3" step="0.02" min="0" max="15">
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
